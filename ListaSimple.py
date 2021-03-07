@@ -1,11 +1,11 @@
-from Matriz import Matriz
-class ListaDoble:
+from Dato import Dato
+class ListaSimple:
     def __init__(self):
         self.inicio = None
 
-    #insertar elementos
-    def insertar(self, nombre, n, m):#atributos de la clase
-        nuevo = Matriz(nombre, n, m)
+    #inserta el nuevo objeto
+    def insertar(self, name, x, y):
+        nuevo = Dato(name, x, y)
         if self.inicio is None:
             self.inicio = nuevo
         else:
@@ -13,19 +13,17 @@ class ListaDoble:
             while tmp.siguiente is not None:
                 tmp = tmp.siguiente
             tmp.siguiente = nuevo
-            nuevo.anterior = tmp
-    
-    #muestra
+
+    #muestra el objeto
     def mostrar(self):
         tmp = self.inicio
         contador = 1
         while tmp is not None:
-            print(str(contador) + '. Nombre: ' + str(tmp.nombre) + '. n: ' + str(tmp.n) + '. m: ' + str(tmp.m))
-            print('Algo Registrado: ' + str(tmp.algo.getSize()))#Tamaño de la Lista
+            print(str(contador) + '. Dato: ' + str(tmp.name) + '[x: ' + str(tmp.x) + '. y: ' + str(tmp.y) + ']\n')
             contador += 1
             tmp = tmp.siguiente
     
-    #Tamaño
+    #Longitud o tamaño
     def getSize(self):
         tmp = self.inicio
         cont = 0
@@ -33,12 +31,12 @@ class ListaDoble:
             cont += 1
             tmp = tmp.siguiente
         return cont
-
-    #busqueda & retorno
+    
+    #busqueda y retorno
     def getNodo(self, valor):
         tmp = self.inicio
         while tmp is not None:
-            if str.lower(tmp.nombre) == str.lower(valor):
+            if str.lower(tmp.name) == str.lower(valor):
                 return tmp
             tmp = tmp.siguiente
         return None
