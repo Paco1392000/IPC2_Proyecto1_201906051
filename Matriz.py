@@ -4,6 +4,6 @@ class Matriz:
         self.nombre = nombre
         self.n = n
         self.m = m
-        self.algo = ListaSimple()
+        self.mat = ListaSimple()
         self.siguiente = None
         self.anterior = None
