@@ -167,7 +167,7 @@ class Inicializando():
                     else: 
                         for j in range(col):
                             as2 = 'fila'+str(i+1)+str(j+1)
-                            g.node(id2,self.matrix.Dev(a+1).matriz.Dev(i+1).Dev(j+1).nombre)
+                            g.node(as2,self.matrix.Dev(a+1).matriz.Dev(i+1).Dev(j+1).nombre)
                             g.edge(str(listaa.Dev(j+1).nombre), as2)
                             listab.agregar(as2)
                         listaa.ListaVacia()
