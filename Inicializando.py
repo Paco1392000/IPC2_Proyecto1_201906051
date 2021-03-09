@@ -108,9 +108,33 @@ class Inicializando():
                 self.matrix.Dev(a+1).redmat.Dev(n+1).NodoMostrado()
               
 
-    def archivo_salida(self): #XML
-        print()
 
+
+
+#ARCHIVO P XML SALIDA SABER SI FUNCIONA
+    def archivo_salida(self): #XML
+        top = Element('Matrices')
+        for a in range(self.matrix.large):
+            fila = str(self.matrix.Dev(a+1).redmat.large)
+            columna = str(self.matrix.Dev(a+1).columna)
+            namee = self.matrix.Dev(a+1).nombre+"_salida"
+            grupo = self.matrix.Dev(a+1).datore.large
+            perd = SubElement(top,'Matriz', nombre = str(namee), n = str(fila), m = str(columna),g = str(grupo))
+
+            for i in range(self.matrix.Dev(a+1).redmat.large):
+                for j in range(int(self.matrix.Dev(a+1).columna)):
+                    roo = i+1
+                    col = j+1
+                    perd2 = SubElement(child, 'dato', x = str(roo),y = str(col))
+                    perd2.text = str(self.matrix.Dev(a+1).redmat.Dev(i+1).Dev(j+1).nombre)
+            for h in range(int (grupo)):
+                perd3 = SubElement(perd,'frecuencia', g = str(h+1))
+                perd3.text = str(self.matrix.Dev(a+1).datore.Dev(h+1).large)
+                        
+        file = open('salida.xml', 'w')
+        file.write(str((prettify(top))))
+        file.close()
+        os.system('salida.xml')
 
 
 #SABER SI FUNCIONA  
