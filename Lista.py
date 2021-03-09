@@ -6,7 +6,7 @@ class Lista:
         self.camb = False
         self.inicio = None
 
-    def agregar(self, dato):
+    def agregar(self, dato): 
         tmp = Nodo(dato)
         if self.inicio is None:
             self.inicio = tmp
@@ -24,9 +24,8 @@ class Lista:
                 aux.siguiente = tmp
                 tmp.siguiente = self.inicio
                 self.large += 1
-
-    def ingresarValores(self, x, y, dato):
-        tmp = Nodo(x, y, dato)
+    def ingresarValores(self, dato, x, y): 
+        tmp = Nodo(dato, x, y)
         if self.inicio is None:
             self.inicio = tmp
             self.inicio.siguiente = self.inicio
@@ -63,4 +62,33 @@ class Lista:
                 tmp.siguiente = self.inicio
                 self.large += 1
 
+    def Dev(self, parte):
+        aux = self.inicio
+        cnt = 1
+        while cnt < parte:
+            cnt+=1
+            aux = aux.siguiente
+        return aux
+    def borrarFila(self, parte):
+        self.Dev(parte - 1).siguiente = self.Dev(parte + 1)
+        self.large -= 1
+    def largo(self):
+        return self.large
+    def NodoMostrado(self):
+        aux = self.inicio
+        ta = 0
+        while ta < self.large:
+            ta += 1
+            print(' .-. ' + str(aux.nombre) + ' .-. ')
+            aux = aux.siguiente
+
+    def ListaVacia(self):
+        self.inicio = None
     
+    def CListaVacia(self):
+        cv = True
+        if self.large == 0:
+            return cv
+        else:
+            cv = False
+            return False
