@@ -5,7 +5,6 @@ class Lista:
         self.binabi = ''
         self.camb = False
         self.inicio = None
-
     def agregar(self, dato): 
         tmp = Nodo(dato)
         if self.inicio is None:
@@ -42,7 +41,6 @@ class Lista:
                 aux.siguiente = tmp
                 tmp.siguiente = self.inicio
                 self.large += 1
-
     def AgregarLista(self, dato):
         tmp = dato
         if self.inicio is None:
@@ -61,7 +59,6 @@ class Lista:
                 aux.siguiente = tmp
                 tmp.siguiente = self.inicio
                 self.large += 1
-
     def Dev(self, parte):
         aux = self.inicio
         cnt = 1
@@ -81,10 +78,8 @@ class Lista:
             ta += 1
             print(' .-. ' + str(aux.nombre) + ' .-. ')
             aux = aux.siguiente
-
     def ListaVacia(self):
         self.inicio = None
-    
     def CListaVacia(self):
         cv = True
         if self.large == 0:

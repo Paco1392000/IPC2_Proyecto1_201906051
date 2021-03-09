@@ -26,7 +26,7 @@ class Inicializando():
         print('5to. Semestre')
     def proceso_archivo(self):
         ifes = self.gate.getElementsByTagName('matriz')    
-        contador = 1
+        cont = 1
         for matriz in ifes:
             fila = matriz.getAttribute('n')
             columna = matriz.getAttribute('m')
@@ -44,47 +44,47 @@ class Inicializando():
                     filas.Dev(x).binabi += '0'
                 else:
                     filas.Dev(x).binabi += '1'
-            self.matrix.Dev(contador).matriz= filas
-            contador+=1                            
+            self.matrix.Dev(cont).matriz= filas
+            cont+=1                            
             print('Datos Cargados')
         for a in range(self.matrix.large):            
             ConverBinario = False
             print('Obteniendo Matriz Binaria')            
             datore = Lista()
             datore.ListaVacia()
-            reduccion = Lista()
-            reduccion.ListaVacia()
+            minim = Lista()
+            minim.ListaVacia()
             for i in range(self.matrix.Dev(a + 1).matriz.large):
-                repeticion = Lista()                                
-                repeticion.ListaVacia()
-                newFila = Lista()
-                newFila.ListaVacia()
+                rect = Lista()                                
+                rect.ListaVacia()
+                nueva_filaC = Lista()
+                nueva_filaC.ListaVacia()
                 for j in range(self.matrix.Dev(a+1).matriz.large):
-                    if (i+1)!=(j+1):
+                    if (i+1) != (j+1):
                         #ERROREEEEEESSSSSSSSSSSSSSS
-                        if self.matrix.Dev(a+1).matriz.Dev(i + 1).binabi == self.matrix.Dev(a+1).matriz.Dev(j+1).binabi and self.matrix.Dev(a+1).matriz.Dev(i+1).camb == False and self.matrix.Dev(a+1).matriz.Dev(j+1).camb == False:
+                        if self.matrix.Dev(a+1).matriz.Dev(i+1).binabi == self.matrix.Dev(a+1).matriz.Dev(j+1).binabi and self.matrix.Dev(a+1).matriz.Dev(i+1).camb == False and self.matrix.Dev(a+1).matriz.Dev(j+1).camb == False:
                             
-                            if repeticion.CListaVacia()==True:
+                            if rect.CListaVacia()==True:
                                 
-                                repeticion.agregar(i + 1)
-                                repeticion.agregar(j + 1)
-                                self.matrix.Dev(a + 1).matriz.Dev(j + 1).camb = True
+                                rect.agregar(i + 1)
+                                rect.agregar(j + 1)
+                                self.matrix.Dev(a+1).matriz.Dev(j+1).camb = True
         
                                 for p in range(self.matrix.Dev(a+1).matriz.Dev(i+1).large):
                                     valor = int(self.matrix.Dev(a+1).matriz.Dev(i+1).Dev(p+1).nombre) + int(self.matrix.Dev(a+1).matriz.Dev(j+1).Dev(p+1).nombre)
-                                    newFila.agregar(valor)
+                                    nueva_filaC.agregar(valor)
                             else:
-                                repeticion.agregar(j+1)
+                                rect.agregar(j+1)
                                 self.matrix.Dev(a+1).matriz.Dev(j+1).camb = True
                                 for p in range(self.matrix.Dev(a+1).matriz.Dev(i+1).large):
-                                    newFila.Dev(p+1).nombre += int(self.matrix.Dev(a+1).matriz.Dev(j+1).Dev(p+1).nombre)
-                if repeticion.CListaVacia() == False:
-                    repeticiones.AgregarLista(repeticion)
-                    reduccion.AgregarLista(newFila)
+                                    nueva_filaC.Dev(p+1).nombre += int(self.matrix.Dev(a+1).matriz.Dev(j+1).Dev(p+1).nombre)
+                if rect.CListaVacia() == False:
+                    datore.AgregarLista(rect)
+                    minim.AgregarLista(nueva_filaC)
             self.matrix.Dev(a+1).datore = datore
-            self.matrix.Dev(a+1).redmat = reduccion
+            self.matrix.Dev(a+1).redmat = minim
             if datore.CListaVacia() == False:
-                contador = 0
+                cont = 0
                 for k in range(self.matrix.Dev(a+1).matriz.large):
                     camb = False
                     for t in range(datore.large):
@@ -92,14 +92,14 @@ class Inicializando():
                             if k + 1 == datore.Dev(t+1).Dev(b+1).nombre:
                                 camb = True
                     if camb == False:
-                        newfila = Lista()
-                        newfila.ListaVacia()
+                        nueva_filaC = Lista()
+                        nueva_filaC.ListaVacia()
                         for u in range(self.matrix.Dev(a+1).matriz.Dev(k+1).large):
-                            newfila.insertar(self.matrix.Dev(a+1).matriz.Dev(k+1).Dev(u+1).nombre)
-                        self.matrix.Dev(a+1).redmat.AgregarLista(newfila)
-                        contador+=1
+                            nueva_filaC.agregar(self.matrix.Dev(a+1).matriz.Dev(k+1).Dev(u+1).nombre)
+                        self.matrix.Dev(a+1).redmat.AgregarLista(nueva_filaC)
+                        cont+=1
 
-            for s in range(contador):
+            for s in range(cont):
                 listita = Lista()
                 listita.agregar(1)
                 self.matrix.Dev(a+1).datore.AgregarLista(listita)
@@ -125,12 +125,11 @@ class Inicializando():
                 for j in range(int(self.matrix.Dev(a+1).columna)):
                     roo = i+1
                     col = j+1
-                    perd2 = SubElement(child, 'dato', x = str(roo),y = str(col))
+                    perd2 = SubElement(perd, 'dato', x = str(roo),y = str(col))
                     perd2.text = str(self.matrix.Dev(a+1).redmat.Dev(i+1).Dev(j+1).nombre)
             for h in range(int (grupo)):
-                perd3 = SubElement(perd,'frecuencia', g = str(h+1))
-                perd3.text = str(self.matrix.Dev(a+1).datore.Dev(h+1).large)
-                        
+                perd3 = SubElement(perd,'frec', g = str(h+1))
+                perd3.text = str(self.matrix.Dev(a+1).datore.Dev(h+1).large)     
         file = open('salida.xml', 'w')
         file.write(str((prettify(top))))
         file.close()
@@ -169,17 +168,15 @@ class Inicializando():
                         for j in range(col):
                             as2 = 'fila'+str(i+1)+str(j+1)
                             g.node(id2,self.matrix.Dev(a+1).matriz.Dev(i+1).Dev(j+1).nombre)
-                            g.edge(str(listaid.Dev(j+1).nombre), as2)
-                            listab.insertar(as2)
+                            g.edge(str(listaa.Dev(j+1).nombre), as2)
+                            listab.agregar(as2)
                         listaa.ListaVacia()
                         for k in range(col):                            
                             listaa.agregar(listab.Dev(k+1).nombre) 
                         listab.ListaVacia()                        
                 g.view()
 
-
-
-
+#MENUPRINCIPAL
     def Menuprincipal(self):
         fuera = False
         while fuera == False:
