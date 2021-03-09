@@ -1,1 +1,2 @@
-# Proyecto1-201906051
+IPC2_Proyecto1_201906051
+Juan Francisco Urbina Silva
