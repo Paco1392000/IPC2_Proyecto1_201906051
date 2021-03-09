@@ -48,14 +48,12 @@ class Inicializando():
             contador+=1                            
             print('Datos Cargados')
         for a in range(self.matrix.large):            
-            ConverBinario = False #binarioFlag
+            ConverBinario = False
             print('Obteniendo Matriz Binaria')            
             datore = Lista()
             datore.ListaVacia()
             reduccion = Lista()
             reduccion.ListaVacia()
-
-
             for i in range(self.matrix.Dev(a + 1).matriz.large):
                 repeticion = Lista()                                
                 repeticion.ListaVacia()
@@ -63,8 +61,11 @@ class Inicializando():
                 newFila.ListaVacia()
                 for j in range(self.matrix.Dev(a+1).matriz.large):
                     if (i+1)!=(j+1):
-                        if self.matrix.Dev(a+1).matriz.Dev(i + 1).binabi == self.matrix.Dev(a+1).matriz.Dev(j + 1).binabi and self.matrix.Dev(a+1).matriz.Dev(i+1).camb == False and self.matrix.Dev(a+1).matriz.Dev(j+1).camb == False:
-                            if repeticion.esVacia()==True:
+                        #ERROREEEEEESSSSSSSSSSSSSSS
+                        if self.matrix.Dev(a+1).matriz.Dev(i + 1).binabi == self.matrix.Dev(a+1).matriz.Dev(j+1).binabi and self.matrix.Dev(a+1).matriz.Dev(i+1).camb == False and self.matrix.Dev(a+1).matriz.Dev(j+1).camb == False:
+                            
+                            if repeticion.CListaVacia()==True:
+                                
                                 repeticion.agregar(i + 1)
                                 repeticion.agregar(j + 1)
                                 self.matrix.Dev(a + 1).matriz.Dev(j + 1).camb = True
@@ -105,10 +106,54 @@ class Inicializando():
             for n in range(self.matrix.Dev(a+1).redmat.large):
                 print('No. '+ str(n+1))
                 self.matrix.Dev(a+1).redmat.Dev(n+1).NodoMostrado()
-        print('Proceso terminado, presione ENTER para continuar')       
+              
+
+    def archivo_salida(self): #XML
+        print()
 
 
-        
+
+#SABER SI FUNCIONA  
+    def grafica(self):
+        self.matrix.NodoMostrado()
+        intr = input('Matriz a Graficar: ')
+        for a in range(self.matrix.large):
+            if intr == self.matrix.Dev(a+1).nombre:
+                g = Digraph(filename=self.matrix.Dev(a+1).nombre, format='svg', encoding='UTF-8')
+                g.attr(rankdir = 'TB')
+                g.attr('node', shape='circle')
+                fila = self.matrix.Dev(a+1).fila
+                columna = self.matrix.Dev(a+1).columna
+                g.node('f','fila: '+str(fila))
+                g.node('c','columna: '+ str(columna))                
+                g.node('r',self.matrix.Dev(a+1).nombre)
+                g.edge('r','fila')
+                g.edge('r','columna')
+                listaa = Lista()
+                listab = Lista()
+                for i in range(self.matrix.Dev(a+1).matriz.large):
+                    col = int(columna)
+                    as1 = ''
+                    as2 = ''
+                    if i+1 == 1:
+                        for j in range(col):
+                            as1 = 'fila'+str(i+1)+str(j+1)
+                            g.node(as1,self.matrix.Dev(a+1).matriz.Dev(i+1).Dev(j+1).nombre)
+                            g.edge('raiz', as1)
+                            listaa.agregar(as1)
+                    else: 
+                        for j in range(col):
+                            as2 = 'fila'+str(i+1)+str(j+1)
+                            g.node(id2,self.matrix.Dev(a+1).matriz.Dev(i+1).Dev(j+1).nombre)
+                            g.edge(str(listaid.Dev(j+1).nombre), as2)
+                            listab.insertar(as2)
+                        listaa.ListaVacia()
+                        for k in range(col):                            
+                            listaa.agregar(listab.Dev(k+1).nombre) 
+                        listab.ListaVacia()                        
+                g.view()
+
+
 
 
     def Menuprincipal(self):
@@ -132,9 +177,11 @@ class Inicializando():
                     self.proceso_archivo()
                 elif option == 3:
                     print('Escribiendo el Archivo de Salida')
+                    self.archivo_salida()
                 elif option == 4:
                     self.datos_estudiante()
                 elif option == 5:
+                    self.grafica()
                     print('Generando Grafica')
                 elif option == 6:
                     print('Fin del Programa')
