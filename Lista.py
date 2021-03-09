@@ -66,16 +66,14 @@ class Lista:
         aux = self.inicio
         cnt = 1
         while cnt < parte:
-            cnt += 1
+            cnt+=1
             aux = aux.siguiente
         return aux
     def borrarFila(self, parte):
         self.Dev(parte - 1).siguiente = self.Dev(parte + 1)
         self.large -= 1
-
     def largo(self):
         return self.large
-    
     def NodoMostrado(self):
         aux = self.inicio
         ta = 0

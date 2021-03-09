@@ -47,13 +47,67 @@ class Inicializando():
             self.matrix.Dev(contador).matriz= filas
             contador+=1                            
             print('Datos Cargados')
+        for a in range(self.matrix.large):            
+            ConverBinario = False #binarioFlag
+            print('Obteniendo Matriz Binaria')            
+            datore = Lista()
+            datore.ListaVacia()
+            reduccion = Lista()
+            reduccion.ListaVacia()
 
+
+            for i in range(self.matrix.Dev(a + 1).matriz.large):
+                repeticion = Lista()                                
+                repeticion.ListaVacia()
+                newFila = Lista()
+                newFila.ListaVacia()
+                for j in range(self.matrix.Dev(a+1).matriz.large):
+                    if (i+1)!=(j+1):
+                        if self.matrix.Dev(a+1).matriz.Dev(i + 1).binabi == self.matrix.Dev(a+1).matriz.Dev(j + 1).binabi and self.matrix.Dev(a+1).matriz.Dev(i+1).camb == False and self.matrix.Dev(a+1).matriz.Dev(j+1).camb == False:
+                            if repeticion.esVacia()==True:
+                                repeticion.agregar(i + 1)
+                                repeticion.agregar(j + 1)
+                                self.matrix.Dev(a + 1).matriz.Dev(j + 1).camb = True
         
-            
-            
-        
-            
-        
+                                for p in range(self.matrix.Dev(a+1).matriz.Dev(i+1).large):
+                                    valor = int(self.matrix.Dev(a+1).matriz.Dev(i+1).Dev(p+1).nombre) + int(self.matrix.Dev(a+1).matriz.Dev(j+1).Dev(p+1).nombre)
+                                    newFila.agregar(valor)
+                            else:
+                                repeticion.agregar(j+1)
+                                self.matrix.Dev(a+1).matriz.Dev(j+1).camb = True
+                                for p in range(self.matrix.Dev(a+1).matriz.Dev(i+1).large):
+                                    newFila.Dev(p+1).nombre += int(self.matrix.Dev(a+1).matriz.Dev(j+1).Dev(p+1).nombre)
+                if repeticion.CListaVacia() == False:
+                    repeticiones.AgregarLista(repeticion)
+                    reduccion.AgregarLista(newFila)
+            self.matrix.Dev(a+1).datore = datore
+            self.matrix.Dev(a+1).redmat = reduccion
+            if datore.CListaVacia() == False:
+                contador = 0
+                for k in range(self.matrix.Dev(a+1).matriz.large):
+                    camb = False
+                    for t in range(datore.large):
+                        for b in range(datore.Dev(t+1).large):
+                            if k + 1 == datore.Dev(t+1).Dev(b+1).nombre:
+                                camb = True
+                    if camb == False:
+                        newfila = Lista()
+                        newfila.ListaVacia()
+                        for u in range(self.matrix.Dev(a+1).matriz.Dev(k+1).large):
+                            newfila.insertar(self.matrix.Dev(a+1).matriz.Dev(k+1).Dev(u+1).nombre)
+                        self.matrix.Dev(a+1).redmat.AgregarLista(newfila)
+                        contador+=1
+
+            for s in range(contador):
+                listita = Lista()
+                listita.agregar(1)
+                self.matrix.Dev(a+1).datore.AgregarLista(listita)
+            for n in range(self.matrix.Dev(a+1).redmat.large):
+                print('No. '+ str(n+1))
+                self.matrix.Dev(a+1).redmat.Dev(n+1).NodoMostrado()
+        print('Proceso terminado, presione ENTER para continuar')       
+
+
         
 
 
