@@ -1,0 +1,459 @@
+digraph {
+	rankdir=TB
+	node [shape=circle]
+	f [label="fila: 15"]
+	c [label="columna: 15"]
+	r [label=matriz_n_3]
+	r -> fila
+	r -> columna
+	fila11 [label=0]
+	raiz -> fila11
+	fila12 [label=103]
+	raiz -> fila12
+	fila13 [label=0]
+	raiz -> fila13
+	fila14 [label=105]
+	raiz -> fila14
+	fila15 [label=0]
+	raiz -> fila15
+	fila16 [label=0]
+	raiz -> fila16
+	fila17 [label=201]
+	raiz -> fila17
+	fila18 [label=301]
+	raiz -> fila18
+	fila19 [label=0]
+	raiz -> fila19
+	fila110 [label=0]
+	raiz -> fila110
+	fila111 [label=404]
+	raiz -> fila111
+	fila112 [label=501]
+	raiz -> fila112
+	fila113 [label=0]
+	raiz -> fila113
+	fila114 [label=605]
+	raiz -> fila114
+	fila115 [label=0]
+	raiz -> fila115
+	fila21 [label=31]
+	fila11 -> fila21
+	fila22 [label=51]
+	fila12 -> fila22
+	fila23 [label=0]
+	fila13 -> fila23
+	fila24 [label=90]
+	fila14 -> fila24
+	fila25 [label=91]
+	fila15 -> fila25
+	fila26 [label=0]
+	fila16 -> fila26
+	fila27 [label=102]
+	fila17 -> fila27
+	fila28 [label=102]
+	fila18 -> fila28
+	fila29 [label=0]
+	fila19 -> fila29
+	fila210 [label=103]
+	fila110 -> fila210
+	fila211 [label=102]
+	fila111 -> fila211
+	fila212 [label=0]
+	fila112 -> fila212
+	fila213 [label=103]
+	fila113 -> fila213
+	fila214 [label=0]
+	fila114 -> fila214
+	fila215 [label=110]
+	fila115 -> fila215
+	fila31 [label=0]
+	fila21 -> fila31
+	fila32 [label=1002]
+	fila22 -> fila32
+	fila33 [label=2004]
+	fila23 -> fila33
+	fila34 [label=5005]
+	fila24 -> fila34
+	fila35 [label=0]
+	fila25 -> fila35
+	fila36 [label=701]
+	fila26 -> fila36
+	fila37 [label=90]
+	fila27 -> fila37
+	fila38 [label=42]
+	fila28 -> fila38
+	fila39 [label=0]
+	fila29 -> fila39
+	fila310 [label=3]
+	fila210 -> fila310
+	fila311 [label=2]
+	fila211 -> fila311
+	fila312 [label=2]
+	fila212 -> fila312
+	fila313 [label=3]
+	fila213 -> fila313
+	fila314 [label=6]
+	fila214 -> fila314
+	fila315 [label=0]
+	fila215 -> fila315
+	fila41 [label=0]
+	fila31 -> fila41
+	fila42 [label=10]
+	fila32 -> fila42
+	fila43 [label=94]
+	fila33 -> fila43
+	fila44 [label=85]
+	fila34 -> fila44
+	fila45 [label=0]
+	fila35 -> fila45
+	fila46 [label=27]
+	fila36 -> fila46
+	fila47 [label=41]
+	fila37 -> fila47
+	fila48 [label=12]
+	fila38 -> fila48
+	fila49 [label=0]
+	fila39 -> fila49
+	fila410 [label=43]
+	fila310 -> fila410
+	fila411 [label=92]
+	fila311 -> fila411
+	fila412 [label=52]
+	fila312 -> fila412
+	fila413 [label=13]
+	fila313 -> fila413
+	fila414 [label=16]
+	fila314 -> fila414
+	fila415 [label=0]
+	fila315 -> fila415
+	fila51 [label=0]
+	fila41 -> fila51
+	fila52 [label=1001]
+	fila42 -> fila52
+	fila53 [label=2005]
+	fila43 -> fila53
+	fila54 [label=5007]
+	fila44 -> fila54
+	fila55 [label=0]
+	fila45 -> fila55
+	fila56 [label=703]
+	fila46 -> fila56
+	fila57 [label=91]
+	fila47 -> fila57
+	fila58 [label=52]
+	fila48 -> fila58
+	fila59 [label=0]
+	fila49 -> fila59
+	fila510 [label=3]
+	fila410 -> fila510
+	fila511 [label=2]
+	fila411 -> fila511
+	fila512 [label=2]
+	fila412 -> fila512
+	fila513 [label=3]
+	fila413 -> fila513
+	fila514 [label=6]
+	fila414 -> fila514
+	fila515 [label=0]
+	fila415 -> fila515
+	fila61 [label=13]
+	fila51 -> fila61
+	fila62 [label=93]
+	fila52 -> fila62
+	fila63 [label=54]
+	fila53 -> fila63
+	fila64 [label=65]
+	fila54 -> fila64
+	fila65 [label=26]
+	fila55 -> fila65
+	fila66 [label=0]
+	fila56 -> fila66
+	fila67 [label=0]
+	fila57 -> fila67
+	fila68 [label=0]
+	fila58 -> fila68
+	fila69 [label=38]
+	fila59 -> fila69
+	fila610 [label=57]
+	fila510 -> fila610
+	fila611 [label=54]
+	fila511 -> fila611
+	fila612 [label=74]
+	fila512 -> fila612
+	fila613 [label=39]
+	fila513 -> fila613
+	fila614 [label=23]
+	fila514 -> fila614
+	fila615 [label=0]
+	fila515 -> fila615
+	fila71 [label=0]
+	fila61 -> fila71
+	fila72 [label=10]
+	fila62 -> fila72
+	fila73 [label=94]
+	fila63 -> fila73
+	fila74 [label=85]
+	fila64 -> fila74
+	fila75 [label=0]
+	fila65 -> fila75
+	fila76 [label=27]
+	fila66 -> fila76
+	fila77 [label=41]
+	fila67 -> fila77
+	fila78 [label=12]
+	fila68 -> fila78
+	fila79 [label=0]
+	fila69 -> fila79
+	fila710 [label=43]
+	fila610 -> fila710
+	fila711 [label=92]
+	fila611 -> fila711
+	fila712 [label=52]
+	fila612 -> fila712
+	fila713 [label=13]
+	fila613 -> fila713
+	fila714 [label=16]
+	fila614 -> fila714
+	fila715 [label=0]
+	fila615 -> fila715
+	fila81 [label=0]
+	fila71 -> fila81
+	fila82 [label=101]
+	fila72 -> fila82
+	fila83 [label=0]
+	fila73 -> fila83
+	fila84 [label=107]
+	fila74 -> fila84
+	fila85 [label=0]
+	fila75 -> fila85
+	fila86 [label=0]
+	fila76 -> fila86
+	fila87 [label=203]
+	fila77 -> fila87
+	fila88 [label=302]
+	fila78 -> fila88
+	fila89 [label=0]
+	fila79 -> fila89
+	fila810 [label=0]
+	fila710 -> fila810
+	fila811 [label=402]
+	fila711 -> fila811
+	fila812 [label=505]
+	fila712 -> fila812
+	fila813 [label=0]
+	fila713 -> fila813
+	fila814 [label=607]
+	fila714 -> fila814
+	fila815 [label=0]
+	fila715 -> fila815
+	fila91 [label=0]
+	fila81 -> fila91
+	fila92 [label=13]
+	fila82 -> fila92
+	fila93 [label=94]
+	fila83 -> fila93
+	fila94 [label=85]
+	fila84 -> fila94
+	fila95 [label=0]
+	fila85 -> fila95
+	fila96 [label=27]
+	fila86 -> fila96
+	fila97 [label=41]
+	fila87 -> fila97
+	fila98 [label=12]
+	fila88 -> fila98
+	fila99 [label=0]
+	fila89 -> fila99
+	fila910 [label=43]
+	fila810 -> fila910
+	fila911 [label=92]
+	fila811 -> fila911
+	fila912 [label=52]
+	fila812 -> fila912
+	fila913 [label=13]
+	fila813 -> fila913
+	fila914 [label=16]
+	fila814 -> fila914
+	fila915 [label=0]
+	fila815 -> fila915
+	fila101 [label=0]
+	fila91 -> fila101
+	fila102 [label=1003]
+	fila92 -> fila102
+	fila103 [label=2006]
+	fila93 -> fila103
+	fila104 [label=5010]
+	fila94 -> fila104
+	fila105 [label=0]
+	fila95 -> fila105
+	fila106 [label=931]
+	fila96 -> fila106
+	fila107 [label=92]
+	fila97 -> fila107
+	fila108 [label=62]
+	fila98 -> fila108
+	fila109 [label=0]
+	fila99 -> fila109
+	fila1010 [label=3]
+	fila910 -> fila1010
+	fila1011 [label=2]
+	fila911 -> fila1011
+	fila1012 [label=2]
+	fila912 -> fila1012
+	fila1013 [label=3]
+	fila913 -> fila1013
+	fila1014 [label=6]
+	fila914 -> fila1014
+	fila1015 [label=0]
+	fila915 -> fila1015
+	fila111 [label=14]
+	fila101 -> fila111
+	fila112 [label=13]
+	fila102 -> fila112
+	fila113 [label=0]
+	fila103 -> fila113
+	fila114 [label=85]
+	fila104 -> fila114
+	fila115 [label=66]
+	fila105 -> fila115
+	fila116 [label=0]
+	fila106 -> fila116
+	fila117 [label=41]
+	fila107 -> fila117
+	fila118 [label=12]
+	fila108 -> fila118
+	fila119 [label=0]
+	fila109 -> fila119
+	fila1110 [label=43]
+	fila1010 -> fila1110
+	fila1111 [label=92]
+	fila1011 -> fila1111
+	fila1112 [label=0]
+	fila1012 -> fila1112
+	fila1113 [label=13]
+	fila1013 -> fila1113
+	fila1114 [label=0]
+	fila1014 -> fila1114
+	fila1115 [label=770]
+	fila1015 -> fila1115
+	fila121 [label=11]
+	fila111 -> fila121
+	fila122 [label=38]
+	fila112 -> fila122
+	fila123 [label=47]
+	fila113 -> fila123
+	fila124 [label=35]
+	fila114 -> fila124
+	fila125 [label=56]
+	fila115 -> fila125
+	fila126 [label=0]
+	fila116 -> fila126
+	fila127 [label=0]
+	fila117 -> fila127
+	fila128 [label=0]
+	fila118 -> fila128
+	fila129 [label=89]
+	fila119 -> fila129
+	fila1210 [label=21]
+	fila1110 -> fila1210
+	fila1211 [label=32]
+	fila1111 -> fila1211
+	fila1212 [label=12]
+	fila1112 -> fila1212
+	fila1213 [label=21]
+	fila1113 -> fila1213
+	fila1214 [label=42]
+	fila1114 -> fila1214
+	fila1215 [label=0]
+	fila1115 -> fila1215
+	fila131 [label=12]
+	fila121 -> fila131
+	fila132 [label=10]
+	fila122 -> fila132
+	fila133 [label=0]
+	fila123 -> fila133
+	fila134 [label=85]
+	fila124 -> fila134
+	fila135 [label=66]
+	fila125 -> fila135
+	fila136 [label=0]
+	fila126 -> fila136
+	fila137 [label=41]
+	fila127 -> fila137
+	fila138 [label=12]
+	fila128 -> fila138
+	fila139 [label=0]
+	fila129 -> fila139
+	fila1310 [label=43]
+	fila1210 -> fila1310
+	fila1311 [label=92]
+	fila1211 -> fila1311
+	fila1312 [label=0]
+	fila1212 -> fila1312
+	fila1313 [label=13]
+	fila1213 -> fila1313
+	fila1314 [label=0]
+	fila1214 -> fila1314
+	fila1315 [label=770]
+	fila1215 -> fila1315
+	fila141 [label=0]
+	fila131 -> fila141
+	fila142 [label=100]
+	fila132 -> fila142
+	fila143 [label=0]
+	fila133 -> fila143
+	fila144 [label=110]
+	fila134 -> fila144
+	fila145 [label=0]
+	fila135 -> fila145
+	fila146 [label=0]
+	fila136 -> fila146
+	fila147 [label=204]
+	fila137 -> fila147
+	fila148 [label=303]
+	fila138 -> fila148
+	fila149 [label=0]
+	fila139 -> fila149
+	fila1410 [label=0]
+	fila1310 -> fila1410
+	fila1411 [label=401]
+	fila1311 -> fila1411
+	fila1412 [label=506]
+	fila1312 -> fila1412
+	fila1413 [label=0]
+	fila1313 -> fila1413
+	fila1414 [label=608]
+	fila1314 -> fila1414
+	fila1415 [label=0]
+	fila1315 -> fila1415
+	fila151 [label=12]
+	fila141 -> fila151
+	fila152 [label=34]
+	fila142 -> fila152
+	fila153 [label=74]
+	fila143 -> fila153
+	fila154 [label=51]
+	fila144 -> fila154
+	fila155 [label=96]
+	fila145 -> fila155
+	fila156 [label=0]
+	fila146 -> fila156
+	fila157 [label=0]
+	fila147 -> fila157
+	fila158 [label=0]
+	fila148 -> fila158
+	fila159 [label=99]
+	fila149 -> fila159
+	fila1510 [label=42]
+	fila1410 -> fila1510
+	fila1511 [label=12]
+	fila1411 -> fila1511
+	fila1512 [label=11]
+	fila1412 -> fila1512
+	fila1513 [label=82]
+	fila1413 -> fila1513
+	fila1514 [label=14]
+	fila1414 -> fila1514
+	fila1515 [label=3000]
+	fila1415 -> fila1515
+}
