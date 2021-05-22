@@ -19,9 +19,9 @@ class Inicializando():
             print('Error')
     def datos_estudiante(self):
         print('----------- Datos del Estudiante -----------')
-        print('Nombre: Juan Francisco Urbina Silva')
+        print('Nombre: ')
         print('Introduccion a la Programacion & Computacion 2 Seccion D')
-        print('Carne: 201906051')
+        print('Carne: ')
         print('Ingenieria en Ciencias & Sistemas')
         print('5to. Semestre')
     def proceso_archivo(self):
